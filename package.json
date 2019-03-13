@@ -1,0 +1,54 @@
+{
+  "name": "c3-addon-cli",
+  "description": "A set of commands to manage Construct 3 addon development",
+  "version": "0.0.1",
+  "author": "Nagy Viktor @nagyv",
+  "bin": {
+    "c3-addon-cli": "./bin/run"
+  },
+  "bugs": "https://github.com/nagyv/c3-addon-cli/issues",
+  "dependencies": {
+    "@oclif/command": "^1.5.11",
+    "@oclif/config": "^1.12.9",
+    "@oclif/plugin-help": "^2.1.6",
+    "cli-ux": "^5.2.1"
+  },
+  "devDependencies": {
+    "@oclif/dev-cli": "^1.21.3",
+    "@oclif/test": "^1.2.4",
+    "chai": "^4.2.0",
+    "globby": "^8.0.2",
+    "mocha": "^5.2.0",
+    "nyc": "^13.3.0",
+    "rimraf": "^2.6.3"
+  },
+  "engines": {
+    "node": ">=8.0.0"
+  },
+  "files": [
+    "/bin",
+    "/npm-shrinkwrap.json",
+    "/oclif.manifest.json",
+    "/src"
+  ],
+  "homepage": "https://github.com/nagyv/c3-addon-cli",
+  "keywords": [
+    "oclif"
+  ],
+  "license": "MIT",
+  "main": "src/index.js",
+  "oclif": {
+    "commands": "./src/commands",
+    "bin": "c3-addon-cli",
+    "plugins": [
+      "@oclif/plugin-help"
+    ]
+  },
+  "repository": "nagyv/c3-addon-cli",
+  "scripts": {
+    "postpack": "rimraf oclif.manifest.json",
+    "prepack": "oclif-dev manifest && oclif-dev readme",
+    "test": "nyc mocha --forbid-only \"test/**/*.test.js\"",
+    "version": "oclif-dev readme && git add README.md"
+  }
+}
