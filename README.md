@@ -12,6 +12,7 @@ A set of commands to manage Construct 3 addon development
 * [Usage](#usage)
 * [Commands](#commands)
 * [Plans](#plans)
+* [License](#license)
 <!-- tocstop -->
 # Usage
 
@@ -23,7 +24,7 @@ $ npm install -g c3-addon-cli
 $ c3-addon-cli COMMAND
 running command...
 $ c3-addon-cli (-v|--version|version)
-c3-addon-cli/0.0.1 win32-x64 node-v10.15.0
+c3-addon-cli/1.0.0 win32-x64 node-v10.15.0
 $ c3-addon-cli --help [COMMAND]
 USAGE
   $ c3-addon-cli COMMAND
@@ -32,12 +33,30 @@ USAGE
 <!-- usagestop -->
 # Commands
 <!-- commands -->
-* [`c3-addon-cli addCondition`](#c3-addon-cli-condition)
-* [`c3-addon-cli addAction`](#c3-addon-cli-action)
-* [`c3-addon-cli addExpression`](#c3-addon-cli-expression)
+* [`c3-addon-cli addAction ID`](#c3-addon-cli-addaction-id)
+* [`c3-addon-cli addCondition ID`](#c3-addon-cli-addcondition-id)
+* [`c3-addon-cli addExpression ID`](#c3-addon-cli-addexpression-id)
 * [`c3-addon-cli help [COMMAND]`](#c3-addon-cli-help-command)
 
-## `c3-addon-cli addCondition`
+## `c3-addon-cli addAction ID`
+
+Add new action
+
+```
+USAGE
+  $ c3-addon-cli addAction ID
+
+ARGUMENTS
+  ID  An identifier for the action. This will be the scriptName too.
+
+OPTIONS
+  -h, --isHighlighted  Is highlighted
+  --dryRun             Dry run. Don't write any changes to disk
+```
+
+_See code: [src\commands\addAction.js](https://github.com/nagyv/c3-addon-cli/blob/v1.0.0/src\commands\addAction.js)_
+
+## `c3-addon-cli addCondition ID`
 
 Add new condition
 
@@ -55,30 +74,13 @@ OPTIONS
   --dryRun             Dry run. Don't write any changes to disk
 ```
 
-_See code: [src\commands\addCondition.js](https://github.com/nagyv/c3-addon-cli/blob/v0.0.1/src\commands\addCondition.js)_
+_See code: [src\commands\addCondition.js](https://github.com/nagyv/c3-addon-cli/blob/v1.0.0/src\commands\addCondition.js)_
 
-## `c3-addon-cli addAction`
-
-Add new action
-
-```
-USAGE
-  $ c3-addon-cli addAction ID
-
-ARGUMENTS
-  ID  An identifier for the action. This will be the scriptName too.
-
-OPTIONS
-  -h, --isHighlighted  Is highlighted
-  --dryRun             Dry run. Don't write any changes to disk
-```
-
-_See code: [src\commands\addAction.js](https://github.com/nagyv/c3-addon-cli/blob/v0.0.1/src\commands\addAction.js)_
-
-## `c3-addon-cli addExpression`
+## `c3-addon-cli addExpression ID`
 
 Add new expression
 
+```
 USAGE
   $ c3-addon-cli addExpression ID
 
@@ -89,7 +91,7 @@ OPTIONS
   --dryRun  Dry run. Don't write any changes to disk
 ```
 
-_See code: [src\commands\addExpression.js](https://github.com/nagyv/c3-addon-cli/blob/v0.0.1/src\commands\addExpression.js)_
+_See code: [src\commands\addExpression.js](https://github.com/nagyv/c3-addon-cli/blob/v1.0.0/src\commands\addExpression.js)_
 
 ## `c3-addon-cli help [COMMAND]`
 
