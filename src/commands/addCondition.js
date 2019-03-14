@@ -5,6 +5,7 @@ const BaseCommand = require('../commandBase')
 class AddCondition extends BaseCommand {
   async run() {
     this.class = AddCondition
+    this.jsFile = 'conditions.js'
     await super.run()
   }
 
@@ -20,7 +21,7 @@ class AddCondition extends BaseCommand {
       isHighlighted: flags.isHighlighted,
       params: this.generateParamsAcesPart(args.parameters)
     })
-    this._writeFile(acesPath, JSON.stringify(aces, null, 2), "Aces has been written", flags)
+    await this._writeFile(acesPath, JSON.stringify(aces, null, 2), "Aces has been written", flags)
   }
 
   async _writeLanguageFile(args, flags) {
@@ -38,7 +39,7 @@ class AddCondition extends BaseCommand {
       "description": description,
       "params": this.generateParamsLanguagePart(args.parameters)
     }
-    this._writeFile(filePath, JSON.stringify(aces, null, 2), "Language has been written", flags)
+    await this._writeFile(filePath, JSON.stringify(aces, null, 2), "Language has been written", flags)
   }
 }
 

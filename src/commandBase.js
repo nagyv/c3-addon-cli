@@ -1,6 +1,9 @@
 const { cli } = require('cli-ux')
 const {Command} = require('@oclif/command')
 const fs = require('fs')
+const {promisify} = require('util')
+
+const writeFile = promisify(fs.writeFile)
 
 class BaseCommand extends Command {
   async run() {
@@ -17,6 +20,7 @@ class BaseCommand extends Command {
     }
     await this._writeAces(args, flags)
     await this._writeLanguageFile(args, flags)
+    await this._writeBoilerplate(args, flags)
   }
 
   async _getParam () {
@@ -33,9 +37,25 @@ class BaseCommand extends Command {
     if (flags.dryRun) {
       this.log(`Not writing file ${path} with data ${data}`)
     } else {
-      await fs.writeFile(path, data)
+      await writeFile(path, data)
       this.log(msg)
     }
+  }
+
+  async _writeBoilerplate(args, flags) {
+    const data = await readFile(path.join(process.cwd(), 'c3runtime', this.jsFile))
+    const needle = new RegExp('// next item -- placeholder for c3-addon-cli')
+    if(!needle.test(data.toString('utf-8'))) {
+      this.log(`Could not add boilerplate js code to ${filePath}`)
+      return
+    }
+    const splitData = data.toString('utf-8').split(needle)
+    const newData = `${splitData[0]}"${args.id}": function ${args.id} {
+        return true;
+      },
+      // next item -- placeholder for c3-addon-cli${splitData[1]}
+    `
+    await this._writeFile(filePath, newData, `Edited ${this.jsFile}`, flags)
   }
 
   generateParamsAcesPart(params) {

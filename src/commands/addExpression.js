@@ -7,6 +7,7 @@ class AddExpression extends BaseCommand {
   async run() {
     this.hasReturnType = true
     this.class = AddExpression
+    this.jsFile = 'expressions.js'
     await super.run()
   }
 
@@ -20,7 +21,7 @@ class AddExpression extends BaseCommand {
       params: this.generateParamsAcesPart(args.parameters),
       returnType: args.returnType
     })
-    this._writeFile(acesPath, JSON.stringify(aces, null, 2), "Aces has been written", flags)
+    await this._writeFile(acesPath, JSON.stringify(aces, null, 2), "Aces has been written", flags)
   }
 
   async _writeLanguageFile(args, flags) {
@@ -38,7 +39,7 @@ class AddExpression extends BaseCommand {
       "description": description,
       "params": this.generateParamsLanguagePart(args.parameters)
     }
-    this._writeFile(filePath, JSON.stringify(aces, null, 2), "Language has been written", flags)
+    await this._writeFile(filePath, JSON.stringify(aces, null, 2), "Language has been written", flags)
   }
 }
 
