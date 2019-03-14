@@ -24,7 +24,7 @@ $ npm install -g c3-addon-cli
 $ c3-addon-cli COMMAND
 running command...
 $ c3-addon-cli (-v|--version|version)
-c3-addon-cli/1.0.0 win32-x64 node-v10.15.0
+c3-addon-cli/1.1.0 win32-x64 node-v10.15.0
 $ c3-addon-cli --help [COMMAND]
 USAGE
   $ c3-addon-cli COMMAND
@@ -37,6 +37,7 @@ USAGE
 * [`c3-addon-cli addCondition ID`](#c3-addon-cli-addcondition-id)
 * [`c3-addon-cli addExpression ID`](#c3-addon-cli-addexpression-id)
 * [`c3-addon-cli help [COMMAND]`](#c3-addon-cli-help-command)
+* [`c3-addon-cli init OUTDIR`](#c3-addon-cli-init-outdir)
 
 ## `c3-addon-cli addAction ID`
 
@@ -54,7 +55,7 @@ OPTIONS
   --dryRun             Dry run. Don't write any changes to disk
 ```
 
-_See code: [src\commands\addAction.js](https://github.com/nagyv/c3-addon-cli/blob/v1.0.0/src\commands\addAction.js)_
+_See code: [src\commands\addAction.js](https://github.com/nagyv/c3-addon-cli/blob/v1.1.0/src\commands\addAction.js)_
 
 ## `c3-addon-cli addCondition ID`
 
@@ -74,7 +75,7 @@ OPTIONS
   --dryRun             Dry run. Don't write any changes to disk
 ```
 
-_See code: [src\commands\addCondition.js](https://github.com/nagyv/c3-addon-cli/blob/v1.0.0/src\commands\addCondition.js)_
+_See code: [src\commands\addCondition.js](https://github.com/nagyv/c3-addon-cli/blob/v1.1.0/src\commands\addCondition.js)_
 
 ## `c3-addon-cli addExpression ID`
 
@@ -91,7 +92,7 @@ OPTIONS
   --dryRun  Dry run. Don't write any changes to disk
 ```
 
-_See code: [src\commands\addExpression.js](https://github.com/nagyv/c3-addon-cli/blob/v1.0.0/src\commands\addExpression.js)_
+_See code: [src\commands\addExpression.js](https://github.com/nagyv/c3-addon-cli/blob/v1.1.0/src\commands\addExpression.js)_
 
 ## `c3-addon-cli help [COMMAND]`
 
@@ -109,6 +110,20 @@ OPTIONS
 ```
 
 _See code: [@oclif/plugin-help](https://github.com/oclif/plugin-help/blob/v2.1.6/src\commands\help.ts)_
+
+## `c3-addon-cli init OUTDIR`
+
+Start a new C3 plugin
+
+```
+USAGE
+  $ c3-addon-cli init OUTDIR
+
+ARGUMENTS
+  OUTDIR  The output directory for the new C3 plugin code
+```
+
+_See code: [src\commands\init.js](https://github.com/nagyv/c3-addon-cli/blob/v1.1.0/src\commands\init.js)_
 <!-- commandsstop -->
 
 # Plans
