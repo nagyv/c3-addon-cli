@@ -1,0 +1,10 @@
+{
+  "name": "sao-generator",
+  "version": "0.0.0",
+  "main": "saofile.js",
+  "description": "Construct 3 plugin generator",
+  "files": [
+    "saofile.js",
+    "template"
+  ]
+}

@@ -11,7 +11,9 @@
     "@oclif/command": "^1.5.11",
     "@oclif/config": "^1.12.9",
     "@oclif/plugin-help": "^2.1.6",
-    "cli-ux": "^5.2.1"
+    "cli-ux": "^5.2.1",
+    "sao": "^1.6.1",
+    "superb": "^3.0.0"
   },
   "devDependencies": {
     "@oclif/dev-cli": "^1.21.3",

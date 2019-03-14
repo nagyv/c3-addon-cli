@@ -1,0 +1,25 @@
+{
+  "languageTag": "en-US",
+  "fileDescription": "Strings for <%= name %> Plugin",
+  "text": {
+    "plugins": {
+      "<%= id.toLowerCase() %>": {
+        "name": "<%= name %>",
+        "description": "<%= description %>",
+        "help-url": "<%= website %>",
+        "author": "<%= username %>",
+        "properties": {
+        },
+        "aceCategories": {
+          "custom": "Custom"
+        },
+        "conditions": {
+        },
+        "actions": {
+        },
+        "expressions": {
+        }
+      }
+    }
+  }
+}

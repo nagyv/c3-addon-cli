@@ -1,0 +1,32 @@
+{
+  "name": "<%= name %>",
+  "version": "0.0.0",
+  "description": "<%= description %>",
+  "scripts": {
+    "test": "mocha",
+    "build": "webpack --config webpack.config.js"
+  },
+  "repository": {
+    "url": "<%= username %>/<%= name %>",
+    "type": "git"
+  },
+  "keywords": [
+    "construct3",
+    "i18next",
+    "translation",
+    "localization",
+    "internationalization"
+  ],
+  "author": "<%= username %> <<%= email %>> (<%= website %>)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/nagyv/c3-i18next/issues"
+  },
+  "homepage": "https://github.com/nagyv/c3-i18next#readme",
+  "devDependencies": {
+    "copy-webpack-plugin": "^5.0.0",
+    "webpack": "^4.29.6",
+    "webpack-cli": "^3.2.3",
+    "zip-webpack-plugin": "^3.0.0"
+  }
+}
