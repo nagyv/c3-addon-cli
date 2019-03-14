@@ -24,7 +24,7 @@ $ npm install -g c3-addon-cli
 $ c3-addon-cli COMMAND
 running command...
 $ c3-addon-cli (-v|--version|version)
-c3-addon-cli/1.1.0 win32-x64 node-v10.15.0
+c3-addon-cli/1.2.0 win32-x64 node-v10.15.0
 $ c3-addon-cli --help [COMMAND]
 USAGE
   $ c3-addon-cli COMMAND
@@ -55,7 +55,7 @@ OPTIONS
   --dryRun             Dry run. Don't write any changes to disk
 ```
 
-_See code: [src\commands\addAction.js](https://github.com/nagyv/c3-addon-cli/blob/v1.1.0/src\commands\addAction.js)_
+_See code: [src\commands\addAction.js](https://github.com/nagyv/c3-addon-cli/blob/v1.2.0/src\commands\addAction.js)_
 
 ## `c3-addon-cli addCondition ID`
 
@@ -75,7 +75,7 @@ OPTIONS
   --dryRun             Dry run. Don't write any changes to disk
 ```
 
-_See code: [src\commands\addCondition.js](https://github.com/nagyv/c3-addon-cli/blob/v1.1.0/src\commands\addCondition.js)_
+_See code: [src\commands\addCondition.js](https://github.com/nagyv/c3-addon-cli/blob/v1.2.0/src\commands\addCondition.js)_
 
 ## `c3-addon-cli addExpression ID`
 
@@ -92,7 +92,7 @@ OPTIONS
   --dryRun  Dry run. Don't write any changes to disk
 ```
 
-_See code: [src\commands\addExpression.js](https://github.com/nagyv/c3-addon-cli/blob/v1.1.0/src\commands\addExpression.js)_
+_See code: [src\commands\addExpression.js](https://github.com/nagyv/c3-addon-cli/blob/v1.2.0/src\commands\addExpression.js)_
 
 ## `c3-addon-cli help [COMMAND]`
 
@@ -123,7 +123,7 @@ ARGUMENTS
   OUTDIR  The output directory for the new C3 plugin code
 ```
 
-_See code: [src\commands\init.js](https://github.com/nagyv/c3-addon-cli/blob/v1.1.0/src\commands\init.js)_
+_See code: [src\commands\init.js](https://github.com/nagyv/c3-addon-cli/blob/v1.2.0/src\commands\init.js)_
 <!-- commandsstop -->
 
 # Plans

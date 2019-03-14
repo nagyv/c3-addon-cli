@@ -1,7 +1,7 @@
 {
   "name": "c3-addon-cli",
   "description": "A set of commands to manage Construct 3 addon development",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "author": "Nagy Viktor @nagyv",
   "bin": {
     "c3-addon-cli": "./bin/run"
