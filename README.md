@@ -128,8 +128,6 @@ _See code: [src\commands\init.js](https://github.com/nagyv/c3-addon-cli/blob/v1.
 
 # Plans
 
-1. Create boilerplate JS code too, not just JSON
-1. Provide a generator template to start new plugin
 1. Provide the cli functionality for behaviors and effects too
 
 # License
